@@ -1,0 +1,41 @@
+for install apache
+
+sudo yum install httpd
+
+
+
+for redirect 
+
+Redirect "/page1.html" "/page2.html"
+
+
+
+
+for restart httpd
+
+systemctl restart httpd
+
+Ask for username and password when accessing a directory.
+
+AuthType Basic
+AuthName “Restricted web page”
+AuthUserFile “/var/www/html/.htpasswd”
+require valid-user
+
+
+ Create a directory then allow access to one of your classmates only.
+
+Require host localhost
+Require ip 127.0.0.1
+Require 192.168
+Require 10
+
+
+Change the default index page to be default.html instead of index.html
+
+DirectoryIndex index.html
+DirectoryIndex index.html defult.html
+
+
+
+
